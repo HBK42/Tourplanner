@@ -1,0 +1,3 @@
+C:\Users\Hasan\Documents\GitHub\Tourplanner\Tourplanner\Tourplanner\obj\Debug\Tourplanner.csproj.AssemblyReference.cache
+C:\Users\Hasan\Documents\GitHub\Tourplanner\Tourplanner\Tourplanner\obj\Debug\App.g.cs
+C:\Users\Hasan\Documents\GitHub\Tourplanner\Tourplanner\Tourplanner\obj\Debug\Tourplanner_MarkupCompile.cache
