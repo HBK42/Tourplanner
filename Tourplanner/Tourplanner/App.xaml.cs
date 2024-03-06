@@ -13,5 +13,14 @@ namespace Tourplanner
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            var wnd = new Views.MainWindow()
+            {
+                DataContext = new ViewModels.MainViewModel()
+
+            };
+            wnd.Show();
+        }
     }
 }
