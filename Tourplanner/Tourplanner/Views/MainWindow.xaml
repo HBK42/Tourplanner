@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HelloWorldB"
+        
         mc:Ignorable="d"
         Title="Tour Logs" Height="500" Width="800">
 
@@ -19,27 +19,55 @@
         <!-- Main content -->
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="200" />
             </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions> 
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+
+            </TextBox>
             <!-- List of tours -->
-            <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="5">
-                <ListBoxItem>Wienerwald</ListBoxItem>
-                <ListBoxItem>Dopplerhütte</ListBoxItem>
-                <ListBoxItem>Figlwart</ListBoxItem>
-                <ListBoxItem>Dorfrunde</ListBoxItem>
-                <ListBoxItem>Vestibulum at eros</ListBoxItem>
-            </ListBox>
+            <Border BorderThickness="0.5" BorderBrush="Gray" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Margin="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="24" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border  BorderThickness="0,0,0,0.5" BorderBrush="Gray" Grid.Row="0" Grid.Column="0">
+                        <DockPanel LastChildFill="True">
+                            <Label DockPanel.Dock="Left">Tours</Label>
+                            <Button BorderThickness="0" BorderBrush="Gray" Width="25" DockPanel.Dock="Right">...</Button>
+                            <Button BorderThickness="0,0,0,0" BorderBrush="Gray" Width="25" DockPanel.Dock="Right">-</Button>
+                            <Button BorderThickness="0,0,0,0" BorderBrush="Gray" Width="25" DockPanel.Dock="Right">+</Button>
+                            <Label></Label>
+                        </DockPanel>
+                    </Border>
+
+                    <ListBox Grid.Row="1" Grid.Column="0"  BorderThickness="0">
+                        <ListBoxItem>Wienerwald</ListBoxItem>
+                        <ListBoxItem>Dopplerhütte</ListBoxItem>
+                        <ListBoxItem>Figlwart</ListBoxItem>
+                        <ListBoxItem>Dorfrunde</ListBoxItem>
+                        <ListBoxItem>Vestibulum at eros</ListBoxItem>
+                    </ListBox>
+                </Grid>
+            </Border>
+
+
 
             <!-- Map and tabs for the main content area -->
-            <TabControl Grid.Row="0" Grid.Column="1" Margin="5">
+            <TabControl Grid.Row="1" Grid.Column="1" Margin="5">
                 <TabItem Header="General">
                     <!-- General content goes here -->
                 </TabItem>
@@ -56,13 +84,28 @@
             </TabControl>
 
             <!-- Tour Logs -->
-            <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" AutoGenerateColumns="False" Margin="5">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Date"/>
-                    <DataGridTextColumn Header="Duration"/>
-                    <DataGridTextColumn Header="Distance"/>
-                </DataGrid.Columns>
-            </DataGrid>
+            <Border BorderThickness="0.5, 0.5, 0.5, 0.5" BorderBrush="Gray" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Margin="5">
+                <StackPanel >
+                    <Border  BorderThickness="0,0,0,0.5" BorderBrush="Gray" Grid.Row="0" Grid.Column="0">
+                        <DockPanel LastChildFill="True">
+                            <Label DockPanel.Dock="Left">Tours</Label>
+                            <Button BorderThickness="0" BorderBrush="Gray" Width="25" DockPanel.Dock="Right">...</Button>
+                            <Button BorderThickness="0,0,0,0" BorderBrush="Gray" Width="25" DockPanel.Dock="Right">-</Button>
+                            <Button BorderThickness="0,0,0,0" BorderBrush="Gray" Width="25" DockPanel.Dock="Right">+</Button>
+                            <Label></Label>
+                        </DockPanel>
+                    </Border>
+                    <DataGrid AutoGenerateColumns="False" Margin="10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Date"/>
+                            <DataGridTextColumn Header="Duration"/>
+                            <DataGridTextColumn Header="Distance"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Border>
+
+
         </Grid>
     </DockPanel>
 </Window>
