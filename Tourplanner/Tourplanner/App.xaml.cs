@@ -21,6 +21,7 @@ namespace Tourplanner
 
             };
             wnd.Show();
+
         }
     }
 }
