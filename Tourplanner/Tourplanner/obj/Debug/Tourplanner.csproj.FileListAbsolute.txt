@@ -12,4 +12,3 @@ C:\Users\Hasan\Documents\GitHub\Tourplanner\Tourplanner\Tourplanner\obj\Debug\To
 C:\Users\Hasan\Documents\GitHub\Tourplanner\Tourplanner\Tourplanner\obj\Debug\Tourplanner.csproj.CoreCompileInputs.cache
 C:\Users\Hasan\Documents\GitHub\Tourplanner\Tourplanner\Tourplanner\obj\Debug\Tourplanner.exe
 C:\Users\Hasan\Documents\GitHub\Tourplanner\Tourplanner\Tourplanner\obj\Debug\Tourplanner.pdb
-C:\Users\Hasan\Documents\GitHub\Tourplanner\Tourplanner\Tourplanner\obj\Debug\Tourplanner_MarkupCompile.lref
